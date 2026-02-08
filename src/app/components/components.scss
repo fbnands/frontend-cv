@@ -1,0 +1,13 @@
+/* Esto asegura que los contenedores de las secciones siempre estén centrados */
+.section .container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Si el Hero también está corrido */
+.hero .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Ajusta según prefieras */
+}

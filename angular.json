@@ -23,23 +23,40 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
-              "src/styles.scss"
-            ]
-          },
+              "src/assets"
+             
+
+                    ],
+       "styles": [
+                    
+   
+            "src/assets/css/main.css",
+            "src/assets/vendor/bootstrap/css/bootstrap.min.css",
+            "src/assets/vendor/bootstrap-icons/bootstrap-icons.css",
+            "src/assets/vendor/aos/aos.css",
+            "src/assets/vendor/glightbox/css/glightbox.min.css",
+            "src/assets/vendor/swiper/swiper-bundle.min.css"
+          
+            
+          ],
+          "scripts": [
+            "src/assets/vendor/bootstrap/js/bootstrap.bundle.min.js",
+            "src/assets/vendor/aos/aos.js",
+            "src/assets/vendor/glightbox/js/glightbox.min.js",
+            "src/assets/vendor/swiper/swiper-bundle.min.js",
+            "src/assets/js/main.js"
+          ]
+                  },
+
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "1MB",
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -57,6 +74,7 @@
           },
           "defaultConfiguration": "production"
         },
+
         "serve": {
           "builder": "@angular/build:dev-server",
           "configurations": {
@@ -69,6 +87,7 @@
           },
           "defaultConfiguration": "development"
         },
+
         "test": {
           "builder": "@angular/build:unit-test"
         }

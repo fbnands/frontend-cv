@@ -1,0 +1,116 @@
+<section id="contact" class="contact section" style="min-height: 100vh; padding-top: 120px;">
+
+  <div class="container">
+
+    <!-- TÍTULO -->
+    <div class="section-title text-center mb-5">
+      <h2>Contacto</h2>
+      <p>Ponte en contacto conmigo</p>
+    </div>
+
+    <!-- TUS DATOS PERSONALES -->
+    <div class="row mb-5">
+
+      <div class="row">
+  <div class="col-6 text-center">
+    <i class="bi bi-geo-alt"></i> <h3>Email</h3>
+    <p>fabian.and96@gmail.com</p>
+  </div>
+
+  <div class="col-6 text-center">
+    <i class="bi bi-phone"></i>
+    <h3>Teléfono</h3>
+    <p>3197403833</p>
+  </div>
+</div>
+
+    </div>
+
+    <!-- FORMULARIO ANGULAR -->
+    <div class="row justify-content-center">
+
+      <div class="col-lg-8">
+
+        <form (ngSubmit)="send()" #f="ngForm">
+
+          <div class="row gy-4">
+
+            <div class="col-md-6">
+              <input
+                type="text"
+                name="NombreCompleto"
+                class="form-control"
+                placeholder="Tu nombre completo"
+                [(ngModel)]="contactData.NombreCompleto"
+                required>
+            </div>
+
+            <div class="col-md-6">
+              <input
+                type="email"
+                name="Correo"
+                class="form-control"
+                placeholder="Tu correo"
+                [(ngModel)]="contactData.Correo"
+                required>
+            </div>
+
+            <div class="col-md-12">
+              <input
+                type="text"
+                name="asunto"
+                class="form-control"
+                placeholder="Asunto"
+                [(ngModel)]="contactData.asunto"
+                required>
+            </div>
+
+            <div class="col-md-12">
+              <textarea
+                name="mensaje"
+                rows="5"
+                class="form-control"
+                placeholder="Mensaje"
+                [(ngModel)]="contactData.mensaje"
+                required></textarea>
+            </div>
+      <div class="col-md-12 text-center" style="margin-top: 20px;">
+  <button type="submit" class="btn" 
+    style="
+      background-color: #2ecc71 !important; 
+      color: white !important; 
+      border: none !important;
+      padding: 10px 30px !important;
+      font-weight: bold !important;
+      font-size: 16px !important;
+      border-radius: 5px !important;
+      cursor: pointer !important;
+      box-shadow: 0 4px #27ae60 !important;
+      transition: all 0.1s ease !important;
+    "
+    onmousedown="this.style.transform='translateY(4px)'; this.style.boxShadow='none';"
+    onmouseup="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px #27ae60';"
+    onmouseleave="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px #27ae60';">
+    Enviar mensaje
+  </button>
+  <div *ngIf="mensajeOk" class="mensaje-exito">
+  {{ mensajeOk }}
+</div>
+
+<div *ngIf="mensajeError" class="mensaje-error">
+  {{ mensajeError }}
+</div>
+  
+</div>
+      
+
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
